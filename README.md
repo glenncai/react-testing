@@ -1,5 +1,18 @@
 # React Testing
 
+### What to test?
+
+- Test component renders
+- Test component renders with props
+- Test component renders in different states
+- Test component reacts to events
+
+### What not to test?
+
+- Implementation details
+- Third party libraries (unless you are testing your own wrapper)
+- Code that is not important from a user point of view
+
 ### Filename Conventions
 
 - Files with `.test.js` or `.test.tsx` suffixes in `src` folder will be picked up by Jest automatically.
@@ -35,3 +48,14 @@ A metric that can help you understand how much of your software code is tested
 }
 
 ```
+
+### RTL (React Testing Library) Queries
+
+Every test we write generally involves the following base steps:
+1. Render the component
+2. Find an element rendered by the component
+3. Assert against the element found in step 2 which will pass or fail the test
+
+To render the component, we use the render method from RTL
+
+For assertion, we use expect passing in a value and combine it with a matcher function from jest or jest-dom
