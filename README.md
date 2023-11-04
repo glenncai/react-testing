@@ -16,3 +16,22 @@ A metric that can help you understand how much of your software code is tested
 - **Branches coverage**: how many of the branches of the control structures (if statements for instance) have been executed
 - **Function coverage**: how many of the functions defined have been called and finally
 - **Line coverage**: how many lines of code have been executed
+
+```json
+{
+  "scripts": {
+    "coverage": "npm test -- --coverage --watchAll=true --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  }
+}
+
+```
