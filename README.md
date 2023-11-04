@@ -96,3 +96,65 @@ The priority order for queries is as follows:
 | getByTitle           | getAllByTitle           |
 | getByTestId          | getAllByTestId          |
 
+### TextMatch
+
+#### String
+
+```html
+
+<div>Hello World</div>
+```
+
+Full string match
+
+```js
+screen.getByText('Hello World');
+```
+
+Substring match
+
+```js
+screen.getByText('llo Worl', { exact: false });
+```
+
+Ignore case
+
+```js
+screen.getByText('hello world', { exact: false });
+```
+
+#### Regular Expression
+
+```html
+<div>Hello World</div>
+```
+
+Substring match
+
+```js
+screen.getByText(/World/);
+```
+
+Substring match, ignore case
+
+```js
+screen.getByText(/world/i);
+```
+
+Full string match, ignore case
+
+```js
+screen.getByText(/^hello world$/i);
+```
+
+#### Custom Function
+
+```html
+<div>Hello World</div>
+```
+
+```js
+screen.getByText((content) => {
+  return content.startsWith('Hello');
+});
+```

@@ -16,7 +16,13 @@ describe('Application', () => {
     expect(sectionHeading).toBeInTheDocument();
 
     const paragraphElement = screen.getByText('All fields are mandatory');
+    const paragraphElement_substring_match = screen.getByText('ields are', { exact: false });
+    const paragraphElement_regex_match = screen.getByText(/fields are mandatory/i);
+    const paragraphElement_custom_function = screen.getByText(content => content.startsWith('All'));
     expect(paragraphElement).toBeInTheDocument();
+    expect(paragraphElement_substring_match).toBeInTheDocument();
+    expect(paragraphElement_regex_match).toBeInTheDocument();
+    expect(paragraphElement_custom_function).toBeInTheDocument();
 
     const closeElement = screen.getByTitle('close');
     expect(closeElement).toBeInTheDocument();
