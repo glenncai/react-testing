@@ -158,3 +158,15 @@ screen.getByText((content) => {
   return content.startsWith('Hello');
 });
 ```
+
+### User Interactions
+
+- A click using a mouse or keypress using a keyboard
+- Software has to respond to such interactions
+- Tests should ensure the interactions are handled as expected
+
+#### fireEvent vs user-event
+
+fireEvent is a method from RTL which is used to dispatch DOM events
+
+user-event simulates full interactions, which may fire multiple events and do additional checks along the way
