@@ -9,7 +9,15 @@ const Application: FC = () => {
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" placeholder="Your fullname..." />
+          <input
+            type="text"
+            id="name"
+            placeholder="Your fullname..."
+            value="Glenn"
+            onChange={() => {
+              console.log('name changed');
+            }}
+          />
         </div>
         <div>
           <label htmlFor="bio">Bio</label>
