@@ -170,3 +170,30 @@ screen.getByText((content) => {
 fireEvent is a method from RTL which is used to dispatch DOM events
 
 user-event simulates full interactions, which may fire multiple events and do additional checks along the way
+
+### Static Analysis Testing
+
+Process of verifying that your code meets certain expectations without actually running it
+
+- Ensure consistent style and formatting
+- Check for common mistakes and possible bugs
+- Limit the complexity of code
+- Verify type consistency
+
+#### Static Analysis Testing Tools
+
+- TypeScript
+- ESLint
+- Prettier
+- Husky
+- lint-staged
+
+`TypeScript`: It is a typed superset of JavaScript that compiles to plain JavaScript. It is a strict syntactical superset of JavaScript and adds optional static typing to the language.
+
+`ESLint`: It is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.
+
+`Prettier`: It is an opinionated code formatter with support for many filetypes. It removes all original styling and ensures that all outputted code conforms to a consistent style.
+
+`Husky`: It is a tool that makes it easy to use GitHooks as part of your development workflow.
+
+`lint-staged`: It is a tool that allows you to run scripts on staged files in git.
